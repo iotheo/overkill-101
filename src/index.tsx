@@ -3,6 +3,10 @@ import { render } from 'react-dom';
 
 import './css/index.scss';
 
-const App = () => <div className="xd">Hello world</div>;
+interface IProps {
+  title: string;
+}
 
-render(<App />, document.getElementById('root'));
+const App: React.FC<IProps> = props => <div className="xd">{props.title}</div>;
+
+render(<App title="Typescript success" />, document.getElementById('root'));

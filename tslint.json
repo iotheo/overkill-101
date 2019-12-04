@@ -1,0 +1,44 @@
+{
+  "extends": "tslint:recommended",
+  "typedef": [true, "arrow-call-signature", "call-signature", "parameter", "member-variable-declaration"],
+  "rules": {
+    "max-line-length": {
+      "options": [120]
+    },
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "quotemark": [true, "single", "jsx-double"],
+    "no-var-keyword": {
+      "severity": "error"
+    },
+    "no-use-before-declare": {
+      "severity": "error"
+    },
+    "space-before-function-paren": {
+      "severity": "warning"
+    },
+    "typedef": {
+      "options": ["call-signature", "parameter", "member-variable-declaration", "variable-declaration"],
+      "severity": "error"
+    },
+    "eofline": {
+      "severity": "warning"
+    },
+    "arrow-parens": {
+      "options": ["ban-single-arg-parens"],
+      "severity": "warning"
+    }
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [120]
+    }
+  }
+}
