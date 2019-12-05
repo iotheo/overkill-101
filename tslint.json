@@ -18,9 +18,6 @@
     "no-var-keyword": {
       "severity": "error"
     },
-    "no-use-before-declare": {
-      "severity": "error"
-    },
     "space-before-function-paren": {
       "severity": "warning"
     },
