@@ -1,4 +1,13 @@
 {
   "extends": ["airbnb", "airbnb/hooks"],
-  "parser": "@typescript-eslint/parser"
+  "env": {
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/destructuring-assignment": 1,
+    "arrow-parens": [1, "as-needed"],
+    "object-curly-spacing": [2, "always"]
+  }
 }
