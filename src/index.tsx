@@ -9,8 +9,6 @@ interface IProps {
   title: string;
 }
 
-const {a, b} = 5;
-
 const App: React.FC<IProps> = ({ title }) => <div className="xd">{title}</div>;
 
 render(<App title="Typescript success" />, document.getElementById('root'));

@@ -1,11 +1,11 @@
 const path = require('path');
-const HtmlWebpackPlugin =  require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname , 'dist'),
-    filename: 'index.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
   },
   module: {
     rules: [
@@ -15,9 +15,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
-        }
+        },
       },
       {
         test: /\.tsx?$/,
@@ -27,16 +27,20 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-      }
-    ]
+      },
+      {
+        test: /\.svg$/,
+        use: 'svg-inline-loader',
+      },
+    ],
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js'],
   },
-  mode:'development',
+  mode: 'development',
   plugins: [
-    new HtmlWebpackPlugin ({
-      template: './src/index.html'
-    })
-  ]
-}
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
+};
